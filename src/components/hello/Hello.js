@@ -1,18 +1,13 @@
-import { mapState, mapActions } from "vuex";
+import React, { Component } from "react";
 
-export default {
-    name: "Hello",
-    computed: {
-        ...mapState({
-            hello: state => state.hello
-        })
-    },
-    methods: {
-        ...mapActions({
-            setHello: "SET_HELLO"
-        })
-    },
-    mounted() {
-        this.setHello("Hello");
+export default class Hello extends Component {
+    componentDidMount() {
+        this.props.onSetHello("Hello");
+    }
+
+    render() {
+        return (
+            <div>{this.props.hello}</div>
+        );
     }
 }
