@@ -1,16 +1,16 @@
-import { createStore } from "redux";
+import { combineReducers, createStore } from "redux";
 
-export default createStore((state, action) => {
+const reducer = (state: any, action: any) => {
     switch (action.type) {
     case "SET_HELLO":
         return {
             ...state,
-            hello: action.hello
+            hello: action.payload.hello
         };
     case "SET_WORLD":
         return {
             ...state,
-            world: action.world
+            world: action.payload.world
         };
     default:
         return {
@@ -18,4 +18,6 @@ export default createStore((state, action) => {
             world: ""
         };
     }
-});
+};
+
+export default createStore(combineReducers({ reducer }));

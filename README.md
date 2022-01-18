@@ -1,4 +1,4 @@
-# KESTI Frontend Boilerplate
+# Frontend Boilerplate
 
 ## Framework
 
@@ -22,14 +22,14 @@
 1. Clone from the git repository.
     
     ```shell script
-    git clone https://github.com/kesti-ITBIZ/frontendBoilerplate
-    cd frontendBoilerplate
+    git clone https://github.com/jayur830/frontend-boilerplate
+    cd frontend-boilerplate
     npm i
     ```
 2. Change branch to use other frontend framework.
 
     ```shell script
-    git checkout master    # Vue
+    git checkout vue    # Vue
     ```
     ```shell script
     git checkout react    # React
